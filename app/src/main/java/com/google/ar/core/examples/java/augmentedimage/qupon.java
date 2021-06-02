@@ -18,6 +18,7 @@ public class qupon extends AppCompatActivity {
     public String omikuji;//条件分岐
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //受け取った乱数に応じたクーポンコードの生成
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qupon);
 
@@ -51,6 +52,7 @@ public class qupon extends AppCompatActivity {
     }
 
     public void copy_b(View v){
+        //コピーボタンの実装です。
         TextView textView_c = (TextView)findViewById(R.id.textView3);
         //クリップボードに格納するItemを作成
         ClipData.Item item = new ClipData.Item(omikuji);

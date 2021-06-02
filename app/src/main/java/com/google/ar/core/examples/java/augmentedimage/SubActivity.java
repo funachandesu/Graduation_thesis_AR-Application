@@ -20,7 +20,7 @@ public class SubActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub);
-
+        //おみくじの結果表示画面
         int omikuji_result;
         Intent intent = getIntent();
         omikuji_result = intent.getIntExtra("kekka",10);//値を受け取るok

@@ -493,18 +493,6 @@ https://developers.google.com/ar/reference/java/arcore/reference/com/google/ar/c
   }
   public int rand = random_number;
   public void randomfunc(){
-    //Random r = new Random();
-    //rand = r.nextInt(3);
-    /*String str = String.valueOf(rand);
-    try{
-      FileOutputStream out = openFileOutput("rand.txt",MODE_PRIVATE);
-      out.write(str.getBytes());
-      System.out.println("str:"+str);
-    }catch(IOException e){
-      System.out.println("Error!!");
-    }*/
-
-    Log.d("dbg1", "rand=" + rand);//debug
   }
 
   public void onClick(View v){//次の画面へ遷移するボタン
@@ -513,18 +501,9 @@ https://developers.google.com/ar/reference/java/arcore/reference/com/google/ar/c
     startActivity(intent);
     findViewById(R.id.button5).setVisibility(View.GONE);//次回まで使えなくするため、待機画面表示
     findViewById(R.id.button).setVisibility(View.GONE);
-    /*Date d = new Date();
-    SimpleDateFormat d1 = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-    try{
-      String str = d1.format(d);
-      FileOutputStream out = openFileOutput( "test2.txt", MODE_PRIVATE );
-      out.write( str.getBytes()   );
-    }catch( IOException e ){
-      e.printStackTrace();
-    }*/
-
   }
   public void startButton(View v){//初期画面の非表示
+    //おみくじスタートボタンを押下すると、初期画面が非表示になりカメラの画面が表れます。
     findViewById(R.id.button).setVisibility(View.VISIBLE);
     findViewById(R.id.start_layout).setVisibility(View.GONE);
   }
@@ -533,6 +512,9 @@ https://developers.google.com/ar/reference/java/arcore/reference/com/google/ar/c
     //string score = SessionConfig.AugmentedImageDatabase[0].Quality;
   }
   public void count_check() {
+    //一度おみくじ行ったらtest2.txtに時間を出力、２回目以降起動時にtest2.txtを確認して、
+    // 時間が出力されていたら起動画面の「おみくじスタート」ボタンを非表示にしてます。
+    //仕組みとして完成してないですが、放送予定時間を登録したデータベースと照合してボタンの表示非表示を行うのもいいなと思いました。
     String str1 = "";
     int check_num = 0;
     try{

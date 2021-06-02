@@ -319,14 +319,16 @@ public class ObjectRenderer {
     /*scaleMatrix[0] = scaleFactor;
     scaleMatrix[5] = scaleFactor;
     scaleMatrix[10] = scaleFactor;*/
+    //以下で3D文字の大きさ指定
     scaleFactor = (float).1;
     //System.out.println("scaleFactor:"+scaleFactor);
     scaleMatrix[0] = scaleFactor;
     scaleMatrix[5] = scaleFactor;
     scaleMatrix[10] = scaleFactor;
+    //以下で3D文字に回転アニメーション実装してます、とりあえずで動かしてるので表示位置のズレなど課題有。
     long time = SystemClock.uptimeMillis() % 4000L;
     float angle = 0.090f * ((int) time);
-    Matrix.translateM(modelMatrix,0,5,-10,10);
+    Matrix.translateM(modelMatrix,0,5f,-9000f,-100f);
     Matrix.setRotateM(modelMatrix, 0, 90, 0, 0, 1.0f);
     Matrix.setRotateM(modelMatrix, 0, angle, -1.0f, 0, 0);
     Matrix.multiplyMM(this.modelMatrix, 0, modelMatrix, 0, scaleMatrix, 0);

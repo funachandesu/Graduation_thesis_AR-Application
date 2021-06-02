@@ -61,39 +61,7 @@ public class AugmentedImageRenderer implements random_number {
   public void createOnGlThread(Context context) throws IOException {
 
     //ランダムオブジェクト表示機能
-    /*
-    int test = 1;
-    if(test == 1){
-      imageFrameUpperLeft.createOnGlThread(
-              context, "models/frame_upper_left.obj", "models/frame_base.png");
-      imageFrameUpperLeft.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-      imageFrameUpperLeft.setBlendMode(BlendMode.AlphaBlending);
-    }
-    else{
-      imageFrameUpperLeft.createOnGlThread(
-              context, "models/frame_upper_left.obj", "models/frame_base.png");
-      imageFrameUpperLeft.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-      imageFrameUpperLeft.setBlendMode(BlendMode.AlphaBlending);
-    }
-    */
-    /*try{
-      FileInputStream in = openFileInput("rand.txt");
-      BufferedReader reader = new BufferedReader(new InputStreamReader(in,"UTF-8"));
-      String str = "";
-      String tmp;
-      while((tmp = reader.readLine()) != null){
-        str = str+tmp;
-      }
-      System.out.println(str);
-      test1 = Integer.parseInt(str);
-      System.out.println("int:"+test1);
-      reader.close();
-    }catch (IOException e){
-      System.out.println("Error!!");
-    }*/
-    //AugmentedImageRenderer add = new AugmentedImageRenderer();
-    //add.method_random();
-    //System.out.println("test1="+test1);
+    //ここで乱数の結果に応じて3D文字の表示を行ってます
     System.out.println("random_number:"+random_number);
     if(random_number == 0){
       imageFrameUpperLeft.createOnGlThread(
@@ -133,83 +101,10 @@ public class AugmentedImageRenderer implements random_number {
       imageFrameUpperLeft.updateModelMatrix(scale,1);
 
 
-      /*imageFrameUpperRight.createOnGlThread(
-              context, "models/2.obj", "models/2.png");
-      imageFrameUpperRight.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-      imageFrameUpperRight.setBlendMode(BlendMode.AlphaBlending);
 
-      imageFrameLowerLeft.createOnGlThread(
-              context, "models/2.obj", "models/2.png");
-      imageFrameLowerLeft.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-      imageFrameLowerLeft.setBlendMode(BlendMode.AlphaBlending);
-
-      imageFrameLowerRight.createOnGlThread(
-              context, "models/2.obj", "models/2.png");
-      imageFrameLowerRight.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-      imageFrameLowerRight.setBlendMode(BlendMode.AlphaBlending);*/
     }
 
-    /*
-    * System.out.println("random_number:"+random_number);
-    if(random_number == 0){
-      imageFrameUpperLeft.createOnGlThread(
-              context, "models/frame_upper_left.obj", "models/frame_base.png");
-      imageFrameUpperLeft.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-      imageFrameUpperLeft.setBlendMode(BlendMode.AlphaBlending);
-    }
-    else if(random_number == 1){
-      imageFrameUpperLeft.createOnGlThread(
-              context, "models/frame_upper_left.obj", "models/frame_base.png");
-      imageFrameUpperLeft.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-      imageFrameUpperLeft.setBlendMode(BlendMode.AlphaBlending);
 
-      imageFrameUpperRight.createOnGlThread(
-              context, "models/frame_upper_right.obj", "models/frame_base.png");
-      imageFrameUpperRight.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-      imageFrameUpperRight.setBlendMode(BlendMode.AlphaBlending);
-    }
-    else{
-      imageFrameUpperLeft.createOnGlThread(
-              context, "models/frame_upper_left.obj", "models/frame_base.png");
-      imageFrameUpperLeft.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-      imageFrameUpperLeft.setBlendMode(BlendMode.AlphaBlending);
-
-      imageFrameUpperRight.createOnGlThread(
-              context, "models/frame_upper_right.obj", "models/frame_base.png");
-      imageFrameUpperRight.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-      imageFrameUpperRight.setBlendMode(BlendMode.AlphaBlending);
-
-      imageFrameLowerLeft.createOnGlThread(
-              context, "models/frame_lower_left.obj", "models/frame_base.png");
-      imageFrameLowerLeft.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-      imageFrameLowerLeft.setBlendMode(BlendMode.AlphaBlending);
-
-      imageFrameLowerRight.createOnGlThread(
-              context, "models/frame_lower_right.obj", "models/frame_base.png");
-      imageFrameLowerRight.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-      imageFrameLowerRight.setBlendMode(BlendMode.AlphaBlending);
-    }*/
-
-
-    /*imageFrameUpperLeft.createOnGlThread(
-        context, "models/frame_upper_left.obj", "models/frame_base.png");
-    imageFrameUpperLeft.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-    imageFrameUpperLeft.setBlendMode(BlendMode.AlphaBlending);
-
-    imageFrameUpperRight.createOnGlThread(
-        context, "models/frame_upper_right.obj", "models/frame_base.png");
-    imageFrameUpperRight.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-    imageFrameUpperRight.setBlendMode(BlendMode.AlphaBlending);
-
-    imageFrameLowerLeft.createOnGlThread(
-        context, "models/frame_lower_left.obj", "models/frame_base.png");
-    imageFrameLowerLeft.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-    imageFrameLowerLeft.setBlendMode(BlendMode.AlphaBlending);
-
-    imageFrameLowerRight.createOnGlThread(
-        context, "models/frame_lower_right.obj", "models/frame_base.png");
-    imageFrameLowerRight.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
-    imageFrameLowerRight.setBlendMode(BlendMode.AlphaBlending);*/
   }
 
 
